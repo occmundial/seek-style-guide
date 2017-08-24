@@ -43,6 +43,8 @@ class AutosuggestContainer extends Component {
       <div style={{ width: '300px' }}>
         <DemoComponent
           {...componentProps}
+          id="jobTitles"
+          label="Job Titles"
           inputProps={{
             type: 'search',
             onChange: this.handleChange,
@@ -53,6 +55,8 @@ class AutosuggestContainer extends Component {
         />
         <DemoComponent
           {...componentProps}
+          id="otherAutosuggest"
+          label="Other Autosuggest"
           inputProps={{
             type: 'search',
             onChange: this.handleChange,
@@ -72,8 +76,6 @@ export default {
   component: Autosuggest,
   container: AutosuggestContainer,
   initialProps: {
-    id: 'jobTitles',
-    label: 'Job Titles',
     autosuggestProps: {
       suggestions: ['Developer', 'Product manager', 'Iteration manager', 'Designer'],
       onSuggestionsFetchRequested: () => {},
